@@ -1,0 +1,108 @@
+@font-face {
+    font-family: Pacifico;
+    src: url("./fonts/Pacifico-Regular.ttf");
+}
+@font-face{
+  font-family: Tomorrow;
+  src: url("./fonts/Tomorrow-Light.ttf");
+}
+.titulo{
+    font-family: Pacifico, Arial, sans-serif;
+    font-size: 100px;
+}
+/*F5BFFF*/
+#contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px; 
+  width: 98%; 
+  }
+  
+  .cuadrito {
+    background-color: #eeadfa;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: Tomorrow;
+    border-radius: 10px;
+  }
+    #uno{
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    #cuatro{
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+    #cinco{
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  p{
+    margin-bottom: 15px; 
+  }
+     
+/*ANIMACIONES*/
+/*vasos*/
+.VasosHover {
+  display: none;
+}
+#contVasos:hover .Vasos {
+  display: none;
+}
+#contVasos:hover .VasosHover {
+  display: block;
+}
+/* Envy que gira*/
+.Envy {
+  animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Alphonse*/
+.AlphonseHover {
+  display: none;
+}
+#contAlphonse:hover .Alphonse {
+  display: none;
+}
+#contAlphonse:hover .AlphonseHover {
+  display: block;
+}
+/* Nanas que hacen blink*/
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.blink-Nanas {
+  animation: blink 3s infinite;
+}
+/*Edward té y pesas*/
+.EdwardHover {
+  display: none;
+}
+#contEdward:hover .Edward {
+  display: none;
+}
+#contEdward:hover .EdwardHover {
+  display: block;
+}
+/* Hachi en rosita */
+.Hachi {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+.Hachi:hover {
+  transform: translateX(0);
+}
